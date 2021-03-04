@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-12 col-sm-4">
+    <div class="col-12 col-sm-6">
       <div class="form-login">
         <h2><%= t(".sign_up") %></h2>
 
@@ -8,15 +8,23 @@
           <%= f.error_notification %>
 
           <div class="form-inputs">
-            <%= f.input :email,
-                        required: true,
-                        autofocus: true ,
-                        placeholder: "jame.bond@mi6.org",
+            <div class="form-check form-check-inline">
+              <%= f.input :title, required: true,
+              collection: User::TITLES.sort,
+              as: :radio_buttons,
+              label: false,
+              item_label_class: 'radio-inline mr-2', item_wrapper_tag: false %>
+            </div>
+
+            <%= f.input :first_name, required: true, autofocus: true,
+                        placeholder: "James" %>
+            <%= f.input :last_name, required: true, placeholder: "Bond" %>
+            <%= f.input :email, required: true, placeholder: "james.bond@mi6.org",
                         input_html: { autocomplete: "email" }%>
-            <%= f.input :password,
-                        required: true,
-                        placehoslder: "******",
-                        hint: (t('devise.shared.minimum_password_length', count: @minimum_password_length) if @minimum_password_length),
+            <%= f.input :birthdate, as: :string %>
+            <%= f.input :password, required: true, placeholder: "******",
+                        hint: (t('devise.shared.minimum_password_length',
+                        count: @minimum_password_length) if @minimum_password_length),
                         input_html: { autocomplete: "new-password" } %>
             <%= f.input :password_confirmation,
                         required: true,

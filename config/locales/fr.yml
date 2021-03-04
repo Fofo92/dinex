@@ -1,32 +1,5 @@
+---
 fr:
-  activerecord:
-    attributes:
-      user:
-        confirmation_sent_at: Date d'envoi de la confirmation
-        confirmation_token: Clé de confirmation du mot de passe
-        confirmed_at: Confirmé à
-        created_at: Enregistré à
-        current_password: Mot de passe actuel
-        current_sign_in_at: Date de la connexion actuelle
-        current_sign_in_ip: IP de la connexion actuelle
-        email: Email
-        encrypted_password: Mot de passe chiffré
-        failed_attempts: Tentatives échouées
-        last_sign_in_at: Date de la dernière connexion
-        last_sign_in_ip: IP de la dernière connexion
-        locked_at: Verrouillé à
-        password: Mot de passe
-        password_confirmation: Confirmation du mot de passe
-        remember_created_at: Mémorisé à
-        remember_me: Se souvenir de moi ?
-        reset_password_sent_at: Clé de réinitialisation créée à
-        reset_password_token: Clé de réinitialisation du mot de passe
-        sign_in_count: Nombre des connexions
-        unconfirmed_email: Email non confirmé
-        unlock_token: Clé de déverrouillage
-        updated_at: Date de mise à jour
-    models:
-      user: Utilisateur
   devise:
     confirmations:
       confirmed: Votre compte a bien été confirmé.
@@ -102,17 +75,17 @@ fr:
         we_need_your_current_password_to_confirm_your_changes: nous avons besoin de votre mot de passe actuel pour valider ces modifications
       new:
         sign_up: Inscription
-      signed_up: Bienvenue ! Vous vous êtes bien enregistré(e).
-      signed_up_but_inactive: Vous vous êtes bien enregistré(e). Cependant, nous n’avons pas pu vous connecter car votre compte n’a pas encore été activé.
-      signed_up_but_locked: Vous vous êtes bien enregistré(e). Cependant, nous n’avons pas pu vous connecter car votre compte est verrouillé.
-      signed_up_but_unconfirmed: Un message avec un lien de confirmation vous a été envoyé par mail. Veuillez suivre ce lien pour activer votre compte.
-      update_needs_confirmation: Vous avez bien modifié votre compte, mais nous devons vérifier votre nouvelle adresse email. Veuillez consulter vos emails et cliquer sur le lien de confirmation pour confirmer votre nouvelle adresse.
-      updated: Votre compte a bien été modifié.
-      updated_but_not_signed_in: Votre compte a été mis à jour avec succès. Vous devez vous reconnecter car votre mot de passe a été modifié.
+        signed_up: Bienvenue ! Vous vous êtes bien enregistré(e).
+        signed_up_but_inactive: Vous vous êtes bien enregistré(e). Cependant, nous n’avons pas pu vous connecter car votre compte n’a pas encore été activé.
+        signed_up_but_locked: Vous vous êtes bien enregistré(e). Cependant, nous n’avons pas pu vous connecter car votre compte est verrouillé.
+        signed_up_but_unconfirmed: Un message avec un lien de confirmation vous a été envoyé par mail. Veuillez suivre ce lien pour activer votre compte.
+        update_needs_confirmation: Vous avez bien modifié votre compte, mais nous devons vérifier votre nouvelle adresse email. Veuillez consulter vos emails et cliquer sur le lien de confirmation pour confirmer votre nouvelle adresse.
+        updated: Votre compte a bien été modifié.
+        updated_but_not_signed_in: Votre compte a été mis à jour avec succès. Vous devez vous reconnecter car votre mot de passe a été modifié.
     sessions:
       already_signed_out: Déconnecté(e).
       new:
-      sign_in: Connexion
+        sign_in: Connexion
       signed_in: Connecté(e).
       signed_out: Déconnecté(e).
     shared:
@@ -143,3 +116,14 @@ fr:
       not_saved:
         one: 'une erreur a empêché ce (cet ou cette) %{resource} d’être enregistré(e) :'
         other: "%{count} erreurs ont empêché ce (cet ou cette) %{resource} d’être enregistré(e) :"
+
+  users:
+    index:
+      title: Liste des utilisateurs
+    shared:
+      birthdate: Date de naissance
+      first_name: Prénom
+      last_name: Nom
+      title: Titre
+
+

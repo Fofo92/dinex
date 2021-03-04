@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :title, :first_name, :last_name, :birthdate, presence: true
+  validates :title, :first_name, :last_name, presence: true
 
   TITLES = ['M.', 'Mme', 'Melle', 'Dr', 'Pr']
 end

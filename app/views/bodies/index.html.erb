@@ -1,0 +1,7 @@
+<h1>List of bodies</h1>
+<ul>
+  <% @bodies.each do |body| %>
+    <li><%= body.short_name %> <%= body.long_name %></li>
+  <% end %>
+</ul>
+<%= link_to 'Back', :back %>

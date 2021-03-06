@@ -1,3 +1,7 @@
+fr:
+  bodies:
+    index:
+      title: Liste des organismes
   users:
     index:
       title: Liste des utilisateurs

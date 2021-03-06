@@ -1,3 +1,7 @@
+en:
+  bodies:
+    index:
+      title: List of bodies
   users:
     index:
       title: List of users

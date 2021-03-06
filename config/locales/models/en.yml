@@ -1,0 +1,8 @@
+  users:
+    index:
+      title: List of users
+    shared:
+      birthdate: Date of Birth
+      first_name: First name
+      last_name: Last name
+      title: Title

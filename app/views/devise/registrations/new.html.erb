@@ -22,6 +22,7 @@
             <%= f.input :email, required: true, placeholder: "james.bond@mi6.org",
                         input_html: { autocomplete: "email" }%>
             <%= f.input :birthdate, as: :string %>
+            <%= f.input :photo, as: :file %>
             <%= f.input :password, required: true, placeholder: "******",
                         hint: (t('devise.shared.minimum_password_length',
                         count: @minimum_password_length) if @minimum_password_length),

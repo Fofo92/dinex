@@ -21,7 +21,8 @@
             <%= f.input :last_name, required: true, placeholder: "Bond" %>
             <%= f.input :email, required: true, placeholder: "james.bond@mi6.org",
                         input_html: { autocomplete: "email" }%>
-            <%= f.input :birthdate, as: :string %>
+            <%= f.input :birthdate, as: :string, input_html: {class: "datepicker"}, required: false,
+                      label: t("users.shared.birthdate") %>
             <%= f.input :photo, as: :file %>
             <%= f.input :password, required: true, placeholder: "******",
                         hint: (t('devise.shared.minimum_password_length',

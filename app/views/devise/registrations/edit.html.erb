@@ -23,7 +23,8 @@
           <%= f.input :last_name, required: true, placeholder: "Bond", label: t("users.shared.last_name") %>
           <%= f.input :email, required: true, placeholder: "james.bond@mi6.org",
                       input_html: { autocomplete: "email" }%>
-          <%= f.input :birthdate, as: :string, label: t("users.shared.birthdate") %>
+          <%= f.input :birthdate, as: :string, input_html: {class: "datepicker"}, required: false,
+                      label: t("users.shared.birthdate") %>
           <%= f.input :photo, as: :file %>
           <%= f.input :password,
                       hint: t(".leave_blank_if_you_don_t_want_to_change_it"),

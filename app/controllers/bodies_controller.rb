@@ -48,7 +48,8 @@ class BodiesController < ApplicationController
   end
 
   def body_params
-    params.require(:body).permit(:long_name, :short_name, :comment, :ancestry)
+    params.require(:body).permit(:long_name, :short_name, :comment, :ancestry,
+      :parent_id, :starts_at, :ends_at, :active)
   end
 end
 

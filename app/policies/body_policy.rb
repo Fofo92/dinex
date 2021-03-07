@@ -22,7 +22,7 @@ class BodyPolicy < ApplicationPolicy
   end
 
   def update?
-    false
+    false || user.admin?
   end
 
   def edit?

@@ -1,10 +1,12 @@
-
-<div class='list-inline'>
-  <h1 class='list-in-line-item'>
-    <%= t(".title") %> (<%= pluralize(@bodies.roots.count, 'entité', plural: 'entités') %>)
-  </h1>
-  <%= link_to 'Ajouter un organisme', new_body_path, class: 'list-inline-item btn btn-flat btn-sm' %>
+<div class="container d-flex">
+  <div class='list-inline'>
+    <h1 class='list-inline-item'>
+      <%= t(".title") %> (<%= pluralize(@bodies.roots.count, 'entité', plural: 'entités') %>)
+    </h1>
+    <%= link_to 'Ajouter un organisme', new_body_path, class: 'btn btn-primary' %>
+  </div>
 </div>
+
 <div class="container">
   <ul>
     <% @bodies.each do |body| %>

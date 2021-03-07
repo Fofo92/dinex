@@ -2,6 +2,8 @@ en:
   bodies:
     index:
       title: List of bodies
+    show:
+      title: Details on Body
   users:
     index:
       title: List of users

@@ -1,5 +1,11 @@
+
+<div class='list-inline'>
+  <h1 class='list-in-line-item'>
+    <%= t(".title") %> (<%= pluralize(@bodies.roots.count, 'entité', plural: 'entités') %>)
+  </h1>
+  <%= link_to 'Ajouter un organisme', new_body_path, class: 'list-inline-item btn btn-flat btn-sm' %>
+</div>
 <div class="container">
-  <h1><%= t(".title") %></h1>
   <ul>
     <% @bodies.each do |body| %>
       <li><%= body.short_name %> <%= body.long_name %></li>
@@ -7,3 +13,8 @@
   </ul>
   <%= link_to t("shared.back"), :back %>
 </div>
+
+
+
+
+

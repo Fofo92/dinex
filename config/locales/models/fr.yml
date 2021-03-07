@@ -2,6 +2,8 @@ fr:
   bodies:
     index:
       title: Liste des organismes
+    show:
+      title: Détail de l'organisme
   users:
     index:
       title: Liste des utilisateurs

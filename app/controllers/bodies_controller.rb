@@ -4,4 +4,9 @@ class BodiesController < ApplicationController
     @bodies = Body.all
     authorize @bodies
   end
+
+  def show
+    @body = Body.find(params[:id])
+    authorize @body
+  end
 end

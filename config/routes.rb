@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :users, only: [:index, :show]
 
-  resources :bodies, only: :index
+  resources :bodies, only: [:index, :show, :new, :create, :edit, :update, :delete]
 end

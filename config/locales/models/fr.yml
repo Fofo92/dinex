@@ -10,3 +10,5 @@ fr:
       first_name: Prénom
       last_name: Nom
       title: Titre
+  shared:
+    back: Page précédente

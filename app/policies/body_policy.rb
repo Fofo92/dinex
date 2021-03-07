@@ -5,7 +5,11 @@ class BodyPolicy < ApplicationPolicy
     end
   end
 
-   def index?
+  def index?
+    true
+  end
+
+  def show?
     true
   end
 end

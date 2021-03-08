@@ -1,11 +1,25 @@
 <div class="container">
   <h1><%= t(".title") %></h1>
-  <ul>
-    <% @users.each do |user| %>
-      <li>
-        <%= user.title %> <%= user.first_name %> <%= user.last_name %> <%= user.birthdate.strftime("%d/%m/%Y") %>
-      </li>
-    <% end %>
-  </ul>
+    <div class="d-flex">
+      <% @users.each do |user| %>
+        <%= link_to user_path(user) do %>
+          <div class="card-user sibling-fade">
+              <div class="img">
+                <% if user.photo.attached?%>
+                  <%= image_tag user.photo %>
+                <% else %>
+                  <%= cl_image_tag "https://res.cloudinary.com/fofo921/image/upload/v1613821152/lwksi57wmg6o4l7wfk61h2urg0op.png" %>
+                <% end %>
+              </div>
+            <div class="card-user-infos">
+                <h2><%= user.first_name %> <%= user.last_name %></h2>
+                <p>
+                  <%= user.email %><%#= user.birthdate.strftime("%d/%m/%Y") %>
+                </p>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
   <%= link_to t(".shared.back"), :back  %>
 </div>

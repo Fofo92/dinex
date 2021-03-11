@@ -20,6 +20,9 @@
         <li class="nav-item dropdown">
           <% if current_user.photo.attached? %>
              <%= image_tag current_user.photo, class: "avatar dropdown-toggle", id: 'toggle-d-none-user-avatar', data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+           <% else %>
+             <%= cl_image_tag "https://res.cloudinary.com/fofo921/image/upload/v1613821152/lwksi57wmg6o4l7wfk61h2urg0op.png",
+               class: "avatar dropdown-toggle", id: 'toggle-d-none-user-avatar', data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <% end %>
 
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

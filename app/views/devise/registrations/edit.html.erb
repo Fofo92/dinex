@@ -23,6 +23,9 @@
           <%= f.input :last_name, required: true, placeholder: "Bond", label: t("users.shared.last_name") %>
           <%= f.input :email, required: true, placeholder: "james.bond@mi6.org",
                       input_html: { autocomplete: "email" }%>
+          <%= f.association :body, label_method: :short_name, collection: Body.order(:short_name),
+            include_blank: true, placeholder: "SNCF Réseau" %>
+            <%= f.association :body, label_method: :long_name, collection: Body.order(:long_name), include_blank: false %>
           <%= f.input :birthdate, as: :string, input_html: {class: "datepicker"}, required: false,
                       label: t("users.shared.birthdate") %>
           <%= f.input :photo, as: :file %>
